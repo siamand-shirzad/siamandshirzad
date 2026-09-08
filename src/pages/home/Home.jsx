@@ -20,6 +20,7 @@ const Home = () => {
 
       targetRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- refs is rebuilt each render but the ref objects themselves are stable
   }, [location]);
 
   return (

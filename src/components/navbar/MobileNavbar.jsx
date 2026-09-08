@@ -2,7 +2,7 @@ import { useModalStore } from '@/context/modalStore';
 import { Link, NavLink } from 'react-router-dom';
 
 const MobileNavbar = () => {
-  const { isOpen, toggleModal,closeModal } = useModalStore();
+  const { isOpen, closeModal } = useModalStore();
   if (!isOpen) return null;
   return (
     <>
