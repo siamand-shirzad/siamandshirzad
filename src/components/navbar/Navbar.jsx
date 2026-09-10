@@ -1,35 +1,16 @@
-import { useState, useEffect, useContext, useRef } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 import Glass from '../ui/Glass';
 import MobileNavbar from './MobileNavbar';
 import { useModalStore } from '@/context/modalStore';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  // const { isOpen, toggleModal, closeModal } = useModalStore();
-  // const { isOpen, closeModal, toggleModal } = useModalStore(
-  //   useShallow(state => ({
-  //     isOpen: state.isOpen,
-  //     closeModal: state.closeModal,
-  //     toggleModal: state.toggleModal
-  //   }))
-  // );
   const isOpen = useModalStore(state => state.isOpen);
   const closeModal = useModalStore(state => state.closeModal);
   const toggleModal = useModalStore(state => state.toggleModal);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.innerWidth > 768) {
-  //       setIsScrolled(window.scrollY > 50);
-  //     }
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
   return (
     <>
       {isOpen && (

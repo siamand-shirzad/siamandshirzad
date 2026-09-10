@@ -10,7 +10,7 @@ const Input = props => {
 
   useEffect(() => {
     setHasValue(!!values[name]);
-    // console.log(values[name]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intentionally scoped to this field's value only
   }, [values[name]]);
 
   return (
@@ -24,10 +24,7 @@ const Input = props => {
             touched[name] && errors[name] ? '!border-red-500 border' : null
           }`}
           onKeyDown={e => {
-            
             const form = e.target.form; // کل فرم
-            
-            console.log(form.elements);
             const elements = Array.from(form.elements); // همه‌ی المان‌های فرم به صورت آرایه
             const index = elements.indexOf(e.target); // جایگاه المان فعلی
             if (e.key === 'Enter') {

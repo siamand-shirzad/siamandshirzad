@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="30"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <circle cx="620" cy="150" r="140" fill="#6366f1" opacity="0.25" filter="url(#blur1)"/>
+  <circle cx="180" cy="450" r="160" fill="#22d3ee" opacity="0.18" filter="url(#blur1)"/>
+
+  <!-- floating glass navbar -->
+  <rect x="150" y="250" width="500" height="70" rx="35" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.25"/>
+  <circle cx="205" cy="285" r="18" fill="#ffffff" opacity="0.5"/>
+  <rect x="245" y="275" width="90" height="20" rx="10" fill="#ffffff" opacity="0.35"/>
+  <rect x="355" y="275" width="90" height="20" rx="10" fill="#ffffff" opacity="0.25"/>
+  <rect x="465" y="275" width="90" height="20" rx="10" fill="#ffffff" opacity="0.25"/>
+  <circle cx="600" cy="285" r="18" fill="url(#accent2)" opacity="0.8"/>
+
+  <!-- glass toggle -->
+  <rect x="150" y="360" width="90" height="40" rx="20" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.25"/>
+  <circle cx="222" cy="380" r="16" fill="url(#accent2)"/>
+
+  <!-- glass slider -->
+  <rect x="270" y="372" width="220" height="6" rx="3" fill="#ffffff" opacity="0.2"/>
+  <rect x="270" y="372" width="120" height="6" rx="3" fill="url(#accent2)"/>
+  <circle cx="390" cy="375" r="14" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.4"/>
+
+  <text x="150" y="120" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Liquid Glass Components</text>
+  <rect x="150" y="135" width="160" height="4" rx="2" fill="url(#accent2)"/>
+  <text x="150" y="560" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af">React · Framer Motion · Tailwind · SVG filters</text>
+</svg>

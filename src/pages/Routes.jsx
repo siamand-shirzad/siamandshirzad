@@ -1,19 +1,23 @@
+import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './home/Home';
-import Contact from './contactMe/ContactMe';
-import Projects from './projects/Index';
 import ScrollToTop from '../components/ui/ScrollToTop';
+
+const Contact = lazy(() => import('./contactMe/ContactMe'));
+const Projects = lazy(() => import('./projects/Index'));
 
 const Content = () => {
   return (
     <div className=' mt-28 md:w-[80%] w-[90%] mx-auto  '>
       <ScrollToTop/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 };

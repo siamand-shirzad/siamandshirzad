@@ -9,6 +9,7 @@ const Textarea = props => {
 
   useEffect(() => {
     setHasValue(!!values[name]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intentionally scoped to this field's value only
   }, [values[name]]);
 
   return (
